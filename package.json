@@ -1,0 +1,25 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lekrau/odin-restaurant-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/lekrau/odin-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/lekrau/odin-restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.110.1",
+    "webpack-cli": "^7.2.2"
+  }
+}
