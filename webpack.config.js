@@ -18,4 +18,12 @@ export default {
             template: "./src/template.html",
         }),
     ],
+    module: {
+        rules: [
+            {
+                test: /\.html$/i,
+                use: ["html-loader"],
+            },
+        ],
+    },
 };
