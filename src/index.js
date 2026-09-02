@@ -1,4 +1,16 @@
 console.log("index.js");
 
-import loadInitialPage from "./initial-page-load.js";
-loadInitialPage();
+import loadHomePage from "./home-page-load.js";
+import loadMenuPage from "./menu-page-load.js";
+import loadContactPage from "./contact-page-load.js";
+
+const nav = document.querySelector("nav");
+const homeButton = nav.querySelector(".button.home");
+const menuButton = nav.querySelector(".button.menu");
+const contactButton = nav.querySelector(".button.contact");
+
+homeButton.addEventListener("click", loadHomePage);
+menuButton.addEventListener("click", loadMenuPage);
+contactButton.addEventListener("click", loadContactPage);
+
+loadHomePage();
