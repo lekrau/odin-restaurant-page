@@ -94,6 +94,7 @@ body {
 header {
     width: 850px
 }
+
 nav {
     display: flex;
     justify-content: stretch;
@@ -120,7 +121,6 @@ nav button.active {
 
 #content {
     width: 850px;
-    flex-shrink: 1;
 }
 
 h1 {
@@ -149,6 +149,11 @@ section {
 .additional-text {
     margin: 40px 0;
     font-size: 18px;
+    width: 625px;
+}
+
+img.restaurant-table {
+    border-radius: 12px;
 }
 
 dd {
@@ -159,4 +164,8 @@ dd {
 p,
 dd {
     font-size: 16px;
+}
+
+dd {
+    color: var(--text--secondary);
 }

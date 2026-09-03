@@ -18,6 +18,7 @@ export default function loadHomePage() {
     const image = document.createElement("img");
     image.src = tableImage;
     image.alt = "Mediterranean dishes served on a warmly lit restaurant table, including grilled fish, salad, vegetables, bread, olives, and wine.";
+    image.classList.add("restaurant-table");
     content.appendChild(image);
 
     console.log("Home page loaded");
