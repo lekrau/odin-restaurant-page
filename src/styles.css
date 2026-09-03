@@ -74,11 +74,62 @@ body {
 
 /* SPECIFICS */
 :root {
-    --background: #f6f7f9;
-    --text: #1f2937;
+    --page__background: #F7F3EA;
+    --text--main: #292824;
+    --text--secondary: #6F6A61;
+    --accent--main: #667052;
+    --accent--stronger: #4D563E;
+    --accent--secondary: #B9684C;
+    --borders: #DED6C8;
 }
 
 body {
-    background: var(--background);
-    color: var(--text);
+    background: var(--page__background);
+    color: var(--text--main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content {
+    width: 850px;
+    flex-shrink: 1;
+}
+
+h1 {
+    color: var(--accent--main);
+    font-size: 44px;
+    font-weight: 800;
+    margin-top: 40px;
+    /* WEITER: CHATGPT STYLE UMSETZEN!!! */
+}
+
+h2 {
+    font-size: 27px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 21px;
+    margin-top: 10px;
+}
+
+section {
+    margin: 40px 0;
+}
+
+.description,
+.additional-text {
+    margin: 40px 0;
+    font-size: 18px;
+}
+
+dd {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+p,
+dd {
+    font-size: 16px;
 }
