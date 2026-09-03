@@ -1,27 +1,28 @@
-import tableImage from "./mediterranean-restaurant-table.jpg";
-import addElement from "./utilities.js";
+import { addElement, switchActiveButton } from "./utilities.js";
 
 export default function loadContactPage() {
     console.log("Load contact page");
 
     const content = document.querySelector("#content");
-    
+
+    switchActiveButton(document.querySelector("nav button.contact"));
+
     content.innerHTML = "";
-    
+
     addElement("h1", "Ember & Olive", content);
     addElement("h2", "Contact", content);
     addElement("p", "Planning dinner with friends or simply want to stop by? We’d love to welcome you.", content, ["short-text"]);
     addElement("h3", "Address", content);
     addElement("address", "Ember & Olive<br>24 Market Street<br>Riverside", content, ["address"]);
-    
+
     addElement("h3", "Telephone", content);
     const telephone = addElement("a", "+1 555 014 8290", content, ["telephone"]);
     telephone.href = "tel:+15550148290";
-    
+
     addElement("h3", "E-Mail", content);
     const email = addElement("a", "hello@emberandolive.com", content, ["email"]);
     email.href = "mailto:hello@emberandolive.com";
-    
+
     const openingHoursSection = addElement("section", "", content, ["openingHours"]);
     addElement("h3", "Opening Hours", openingHoursSection);
     addElement("p", "Tuesday – Thursday: 5:00 PM – 10:00 PM", openingHoursSection);

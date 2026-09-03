@@ -91,6 +91,33 @@ body {
     align-items: center;
 }
 
+header {
+    width: 850px
+}
+nav {
+    display: flex;
+    justify-content: stretch;
+    gap: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--borders);
+}
+
+nav button {
+    padding: 10px;
+    background-color: var(--accent--secondary);
+    border: none;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+nav button:hover {
+    background-color: var(--accent--main);
+}
+
+nav button.active {
+    background-color: var(--accent--stronger);
+}
+
 #content {
     width: 850px;
     flex-shrink: 1;

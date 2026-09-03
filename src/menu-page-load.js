@@ -1,10 +1,11 @@
-import tableImage from "./mediterranean-restaurant-table.jpg";
-import addElement from "./utilities.js";
+import { addElement, switchActiveButton } from "./utilities.js";
 
 export default function loadMenuPage() {
     console.log("Load menu page");
 
     const content = document.querySelector("#content");
+
+    switchActiveButton(document.querySelector("nav button.menu"));
 
     content.innerHTML = "";
 

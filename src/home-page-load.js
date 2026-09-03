@@ -1,10 +1,12 @@
 import tableImage from "./mediterranean-restaurant-table.jpg";
-import addElement from "./utilities.js";
+import { addElement, switchActiveButton } from "./utilities.js";
 
 export default function loadHomePage() {
     console.log("Load home page");
 
     const content = document.querySelector("#content");
+
+    switchActiveButton(document.querySelector("nav button.home"));
 
     content.innerHTML = "";
 
