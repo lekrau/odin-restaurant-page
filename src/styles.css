@@ -81,6 +81,9 @@ body {
     --accent--stronger: #4D563E;
     --accent--secondary: #B9684C;
     --borders: #DED6C8;
+    --spacing--large: 40px;
+    --spacing--medium: 20px;
+    --spacing--small: 10px;
 }
 
 body {
@@ -91,20 +94,22 @@ body {
     align-items: center;
 }
 
-header {
-    width: 850px
+header,
+#content {
+    width: min(850px, 100vw);
+    padding: var(--spacing--medium);
 }
 
 nav {
     display: flex;
     justify-content: stretch;
-    gap: 40px;
-    padding-bottom: 20px;
+    gap: var(--spacing--large);
+    padding-bottom: var(--spacing--medium);
     border-bottom: 1px solid var(--borders);
 }
 
 nav button {
-    padding: 10px;
+    padding: var(--spacing--small);
     background-color: var(--accent--secondary);
     border: none;
     border-radius: 10px;
@@ -113,52 +118,49 @@ nav button {
 
 nav button:hover {
     background-color: var(--accent--main);
+    cursor: pointer;
 }
 
 nav button.active {
     background-color: var(--accent--stronger);
 }
 
-#content {
-    width: 850px;
-}
-
 h1 {
     color: var(--accent--main);
     font-size: 44px;
     font-weight: 800;
-    margin-top: 40px;
-    /* WEITER: CHATGPT STYLE UMSETZEN!!! */
+    margin-top: var(--spacing--large);
 }
 
 h2 {
     font-size: 27px;
-    margin-top: 20px;
+    margin-top: var(--spacing--medium);
 }
 
 h3 {
     font-size: 21px;
-    margin-top: 10px;
+    margin-top: var(--spacing--small);
 }
 
 section {
-    margin: 40px 0;
+    margin: var(--spacing--large) 0;
 }
 
 .description,
 .additional-text {
-    margin: 40px 0;
+    margin: var(--spacing--large) 0;
     font-size: 18px;
-    width: 625px;
+    max-width: 625px;
 }
 
 img.restaurant-table {
     border-radius: 12px;
+    margin-bottom: var(--spacing--large);
 }
 
 dd {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing--medium);
 }
 
 p,
@@ -168,4 +170,12 @@ dd {
 
 dd {
     color: var(--text--secondary);
+}
+
+a {
+    color: var(--accent--stronger);
+}
+
+a:hover {
+    color: var(--accent--secondary);
 }
