@@ -81,9 +81,11 @@ body {
     --accent--stronger: #4D563E;
     --accent--secondary: #B9684C;
     --borders: #DED6C8;
-    --spacing--large: 40px;
-    --spacing--medium: 20px;
-    --spacing--small: 10px;
+    --spacing--extra-large: 40px;
+    --spacing--large: 32px;
+    --spacing--medium: 28px;
+    --spacing--small: 20px;
+    --spacing--extra-small: 10px;
 }
 
 body {
@@ -97,70 +99,86 @@ body {
 header,
 #content {
     width: min(850px, 100vw);
-    padding: var(--spacing--medium);
+    padding: var(--spacing--small);
 }
 
 nav {
     display: flex;
     justify-content: stretch;
-    gap: var(--spacing--large);
-    padding-bottom: var(--spacing--medium);
+    gap: var(--spacing--extra-large);
+    padding-bottom: var(--spacing--small);
     border-bottom: 1px solid var(--borders);
 }
 
+@media screen and (width <=500px) {
+    nav {
+        gap: 13px;
+    }
+}
+
 nav button {
-    padding: var(--spacing--small);
-    background-color: var(--accent--secondary);
-    border: none;
+    background-color: var(--page__background);
+    color: var(--text--main);
+    border: 1px solid var(--borders);
     border-radius: 10px;
+    padding: var(--spacing--extra-small);
     flex-grow: 1;
 }
 
 nav button:hover {
     background-color: var(--accent--main);
+    color: var(--page__background);
     cursor: pointer;
 }
 
 nav button.active {
     background-color: var(--accent--stronger);
+    color: var(--page__background);
 }
 
 h1 {
     color: var(--accent--main);
     font-size: 44px;
     font-weight: 800;
-    margin-top: var(--spacing--large);
+    margin-top: var(--spacing--extra-small);
+}
+
+@media screen and (width <=500px) {
+    h1 {
+        font-size: 37px;
+    }
 }
 
 h2 {
     font-size: 27px;
-    margin-top: var(--spacing--medium);
+    margin-top: var(--spacing--small);
 }
 
 h3 {
     font-size: 21px;
-    margin-top: var(--spacing--small);
+    margin: var(--spacing--large) 0 var(--spacing--extra-small) 0;
 }
 
 section {
-    margin: var(--spacing--large) 0;
+    margin: var(--spacing--extra-large) 0;
 }
 
 .description,
-.additional-text {
-    margin: var(--spacing--large) 0;
+.additional-text,
+.intro,
+.short-text {
+    margin: var(--spacing--small) 0;
     font-size: 18px;
     max-width: 625px;
 }
 
-img.restaurant-table {
-    border-radius: 12px;
-    margin-bottom: var(--spacing--large);
+.description {
+    margin-top: var(--spacing--medium);
 }
 
-dd {
-    font-size: 18px;
-    margin-bottom: var(--spacing--medium);
+img.restaurant-table {
+    border-radius: 12px;
+    margin: var(--spacing--extra-large) 0;
 }
 
 p,
@@ -170,6 +188,12 @@ dd {
 
 dd {
     color: var(--text--secondary);
+    margin-bottom: var(--spacing--small);
+}
+
+dt {
+    font-size: 18px;
+    font-weight: 600;
 }
 
 a {
@@ -177,5 +201,5 @@ a {
 }
 
 a:hover {
-    color: var(--accent--secondary);
+    color: var(--accent--main);
 }
