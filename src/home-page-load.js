@@ -1,14 +1,10 @@
 import tableImage from "./mediterranean-restaurant-table.jpg";
-import { addElement, switchActiveButton } from "./utilities.js";
+import { addElement } from "./utilities.js";
 
 export default function loadHomePage() {
     console.log("Load home page");
 
     const content = document.querySelector("#content");
-
-    switchActiveButton(document.querySelector("nav button.home"));
-
-    content.innerHTML = "";
 
     addElement("h1", "Ember & Olive", content);
     addElement("h2", "Mediterranean food, made for sharing.", content);

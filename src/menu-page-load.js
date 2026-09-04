@@ -1,13 +1,9 @@
-import { addElement, switchActiveButton } from "./utilities.js";
+import { addElement } from "./utilities.js";
 
 export default function loadMenuPage() {
     console.log("Load menu page");
 
     const content = document.querySelector("#content");
-
-    switchActiveButton(document.querySelector("nav button.menu"));
-
-    content.innerHTML = "";
 
     addElement("h1", "Ember & Olive", content);
     addElement("h2", "Menu", content);

@@ -1,13 +1,9 @@
-import { addElement, switchActiveButton } from "./utilities.js";
+import { addElement } from "./utilities.js";
 
 export default function loadContactPage() {
     console.log("Load contact page");
 
     const content = document.querySelector("#content");
-
-    switchActiveButton(document.querySelector("nav button.contact"));
-
-    content.innerHTML = "";
 
     addElement("h1", "Ember & Olive", content);
     addElement("h2", "Contact", content);
