@@ -2,8 +2,6 @@ import tableImage from "./mediterranean-restaurant-table.jpg";
 import { addElement } from "./utilities.js";
 
 export default function loadHomePage() {
-    console.log("Load home page");
-
     const content = document.querySelector("#content");
 
     addElement("h1", "Ember & Olive", content);
@@ -16,6 +14,4 @@ export default function loadHomePage() {
     image.alt = "Mediterranean dishes served on a warmly lit restaurant table, including grilled fish, salad, vegetables, bread, olives, and wine.";
     image.classList.add("restaurant-table");
     content.appendChild(image);
-
-    console.log("Home page loaded");
 };

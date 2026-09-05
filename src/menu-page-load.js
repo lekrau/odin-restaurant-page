@@ -1,8 +1,6 @@
 import { addElement } from "./utilities.js";
 
 export default function loadMenuPage() {
-    console.log("Load menu page");
-
     const content = document.querySelector("#content");
 
     addElement("h1", "Ember & Olive", content);
@@ -34,7 +32,5 @@ export default function loadMenuPage() {
     const dessertDishes = addElement("dl", "", dessertSection, ["dessert__dishes"]);
     addElement("dt", "Orange Olive Oil Cake — €8", dessertDishes);
     addElement("dd", "Greek yogurt, honey, pistachios", dessertDishes);
-
-    console.log("Menu page loaded");
 };
 

@@ -1,8 +1,6 @@
 import { addElement } from "./utilities.js";
 
 export default function loadContactPage() {
-    console.log("Load contact page");
-
     const content = document.querySelector("#content");
 
     addElement("h1", "Ember & Olive", content);
@@ -25,6 +23,4 @@ export default function loadContactPage() {
     addElement("p", "Friday – Saturday: 5:00 PM – 11:00 PM", openingHoursSection);
     addElement("p", "Sunday: 5:00 PM – 9:00 PM", openingHoursSection);
     addElement("p", "Monday: Closed", openingHoursSection);
-
-    console.log("Contact page loaded");
 };

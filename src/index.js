@@ -1,5 +1,3 @@
-console.log("index.js");
-
 import "./styles.css";
 import { switchActiveButton } from "./utilities.js";
 import loadHomePage from "./home-page-load.js";
