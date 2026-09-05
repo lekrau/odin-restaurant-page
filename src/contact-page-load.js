@@ -9,7 +9,7 @@ export default function loadContactPage() {
     addElement("h2", "Contact", content);
     addElement("p", "Planning dinner with friends or simply want to stop by? We’d love to welcome you.", content, ["short-text"]);
     addElement("h3", "Address", content);
-    addElement("address", "Ember & Olive<br>24 Market Street<br>Riverside", content, ["address"]);
+    addElement("address", "Ember & Olive\n24 Market Street\nRiverside", content, ["address"]);
 
     addElement("h3", "Telephone", content);
     const telephone = addElement("a", "+1 555 014 8290", content, ["telephone"]);

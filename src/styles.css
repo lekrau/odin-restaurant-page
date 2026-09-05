@@ -203,3 +203,7 @@ a {
 a:hover {
     color: var(--accent--main);
 }
+
+.address {
+    white-space: pre-line;
+}

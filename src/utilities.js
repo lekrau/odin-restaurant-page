@@ -1,6 +1,6 @@
 function addElement(tag, text, parent, classes = []) {
     const element = document.createElement(tag);
-    element.innerHTML = text;
+    element.textContent = text;
     classes.forEach(value => {
         element.classList.add(value);
     });
