@@ -13,8 +13,10 @@ function switchActiveButton(target) {
     buttons.forEach(button => {
         if (button === target) {
             button.classList.add("active");
+            button.setAttribute("aria-current", "page");
         } else {
             button.classList.remove("active");
+            button.removeAttribute("aria-current");
         }
     });
 }
