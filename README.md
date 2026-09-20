@@ -26,6 +26,28 @@ To build the project:
 npm run build
 ```
 
+## Deploy
+
+GitHub Pages serves the contents of the remote `gh-pages` branch. The local
+`gh-pages` branch is used to build the project and commit the generated `dist`
+directory before its contents are pushed to GitHub.
+
+After the finished changes have been merged into `main` and committed, run:
+
+```bash
+git switch gh-pages
+git merge main --no-edit
+npm run build
+git add dist -f
+git commit -m "Deployment commit"
+npm run deploy
+git switch main
+```
+
+The `-f` option adds `dist` despite it being listed in `.gitignore`. The deploy
+script uses `git subtree` to push only the contents of `dist` to the root of the
+remote `gh-pages` branch.
+
 ## What I practiced
 
 * Manipulating the DOM with JavaScript
