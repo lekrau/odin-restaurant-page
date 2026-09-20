@@ -10,21 +10,20 @@ const menuButton = nav.querySelector(".button.menu");
 const contactButton = nav.querySelector(".button.contact");
 const content = document.querySelector("#content");
 
-homeButton.addEventListener("click", () => {
-    switchActiveButton(homeButton);
+function showPage(button, loadPage) {
+    switchActiveButton(button);
     content.innerHTML = "";
-    loadHomePage();
+    loadPage();
+}
+
+homeButton.addEventListener("click", () => {
+    showPage(homeButton, loadHomePage);
 });
 menuButton.addEventListener("click", () => {
-    switchActiveButton(menuButton);
-    content.innerHTML = "";
-    loadMenuPage();
+    showPage(menuButton, loadMenuPage);
 });
 contactButton.addEventListener("click", () => {
-    switchActiveButton(contactButton);
-    content.innerHTML = "";
-    loadContactPage();
+    showPage(contactButton, loadContactPage);
 });
 
-loadHomePage();
-switchActiveButton(homeButton);
+showPage(homeButton, loadHomePage);
