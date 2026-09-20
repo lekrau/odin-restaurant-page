@@ -17,13 +17,13 @@ A restaurant page with three tabs whose content is dynamically rendered using Ja
 git clone https://github.com/lekrau/odin-restaurant-page.git
 cd odin-restaurant-page
 npm install
-npx webpack serve
+npm run dev
 ```
 
 To build the project:
 
 ```bash
-npx webpack
+npm run build
 ```
 
 ## What I practiced
